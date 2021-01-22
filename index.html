@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calc Test</title>
+</head>
+<body>
+  <h1>Retail Calculator</h1>
+  <form>
+      <div class="price"></div>
+      <input type="number" step="any" name="origin" id="origin" placeholder="Cost of item">
+    </div>
+    <div class="profit">
+      <input type="number" step="any" name="added" id="added" placeholder="Markup percentage">
+    </div>
+      <button type="submit" id="submit">Calculate</button>
+      <button type="reset" id="clear">Clear</button>
+  </form>
+  <div class="result">
+      <h2>The result is</h2><span>0</span>
+  </div>
+
+  <script>
+      let num1=parseFloat(document.querySelector('#origin').value)
+      let num2=parseFloat(document.querySelector('#added').value)
+      let calcProfit=parseFloat(100-num2)
+      let btn=document.querySelector('#submit')
+      btn.addEventListener("click", function(event){
+          event.preventDefault()
+          const initResult=num1/calcProfit
+          const finalResult=initResult*100
+          parseFloat(document.querySelector('span').innerHTML=`${finalResult.toFixed(3)}`)
+          console.log(typeof(finalResult))
+          if (finalResult.toString().length>3 && finalResult.toString().length<7){
+              const k=finalResult/1000
+              parseFloat(document.querySelector('span').innerHTML=`${k.toFixed(1)}k`)
+            }
+            if (finalResult.toString().length>6 && finalResult.toString().length<10){
+                const m=finalResult/1000000
+                parseFloat(document.querySelector('span').innerHTML=`${m.toFixed(1)}M`)
+            }
+        });
+  </script>
+  <script>
+       let clr=document.querySelector('#clear');
+        clr.addEventListener("click", function(e){
+            document.querySelector('span').innerHTML='0'
+        })
+  </script>
+</body>
+</html>

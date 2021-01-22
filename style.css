@@ -1,0 +1,136 @@
+* {
+  margin-left: auto;
+  text-align: center;
+}
+
+body {
+  margin-top: 10%;
+  background: -webkit-gradient(linear, left top, right top, from(#4443AB), color-stop(20%, #4E8694), color-stop(40%, #689250));
+  background: linear-gradient(to right, #4443AB 0%, #4E8694 20%, #689250 40%);
+  background-size: cover;
+}
+
+h1 {
+  margin-bottom: 5rem;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  padding: 5rem;
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+
+input {
+  background: transparent;
+  border: transparent;
+  border-radius: 5px;
+  border-bottom: 2px solid #4443AB;
+  margin-bottom: 5rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input:focus {
+  border-bottom: 2px solid #4E8694;
+}
+
+input:focus::-webkit-input-placeholder {
+  font-size: 0.8rem;
+  text-align: left;
+  color: #4E8694;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+input:focus:-ms-input-placeholder {
+  font-size: 0.8rem;
+  text-align: left;
+  color: #4E8694;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+input:focus::-ms-input-placeholder {
+  font-size: 0.8rem;
+  text-align: left;
+  color: #4E8694;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+input:focus::placeholder {
+  font-size: 0.8rem;
+  text-align: left;
+  color: #4E8694;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: #4443AB;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+input:-ms-input-placeholder {
+  font-size: 1rem;
+  color: #4443AB;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+input::-ms-input-placeholder {
+  font-size: 1rem;
+  color: #4443AB;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  color: #4443AB;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -webkit-transition: all 0.5;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+
+span {
+  font-size: 2rem;
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  border: solid 2px #4443AB;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+
+@media screen and (max-width: 450px) {
+  * {
+    overflow: hidden;
+  }
+  form {
+    padding: 3rem;
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  span {
+    padding: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
