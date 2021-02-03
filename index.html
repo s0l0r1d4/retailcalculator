@@ -23,23 +23,21 @@
   </div>
 
   <script>
-      let num1=parseFloat(document.querySelector('#origin').value)
-      let num2=parseFloat(document.querySelector('#added').value)
-      let calcProfit=parseFloat(100-num2)
+      let num1=+document.querySelector('#origin').value
+      let num2=+document.querySelector('#added').value
       let btn=document.querySelector('#submit')
       btn.addEventListener("click", function(event){
           event.preventDefault()
-          const initResult=num1/calcProfit
-          const finalResult=initResult*100
-          parseFloat(document.querySelector('span').innerHTML=`${finalResult.toFixed(3)}`)
+          let finalResult=(num1/(100-num2))*100
+          document.querySelector('span').innerHTML=`${finalResult.toFixed(3)}`
           console.log(typeof(finalResult))
           if (finalResult.toString().length>3 && finalResult.toString().length<7){
               const k=finalResult/1000
-              parseFloat(document.querySelector('span').innerHTML=`${k.toFixed(1)}k`)
+              document.querySelector('span').innerHTML=`${k.toFixed(1)}k`
             }
             if (finalResult.toString().length>6 && finalResult.toString().length<10){
                 const m=finalResult/1000000
-                parseFloat(document.querySelector('span').innerHTML=`${m.toFixed(1)}M`)
+                document.querySelector('span').innerHTML=`${m.toFixed(1)}M`
             }
         });
   </script>

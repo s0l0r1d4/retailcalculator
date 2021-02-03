@@ -119,6 +119,13 @@ span {
   backdrop-filter: blur(50px);
 }
 
+button {
+  background-color: #4443AB;
+  color: white;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+}
+
 @media screen and (max-width: 450px) {
   * {
     overflow: hidden;
